@@ -1,0 +1,21 @@
+name: "AI Code Reviewer Example"
+
+# 触发条件（按需修改）
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  example:
+    uses: exampler0906/ai_reviewer/.github/workflows/code_review.yml@main  # 引用复用的工作流
+    with:
+      PULL_REQUEST_ID: ${{ github.event.pull_request.number }}
+      COMMIT_ID: ${{ github.event.pull_request.head.sha }}
+      SELF_HOSTED: 'ubuntu-latest'  # 若使用 self-host，请更改为对应的 label
+    secrets:
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+      LLM_API_URL: ${{ secrets.LLM_API_URL }}
+      THIS_GITHUB_TOKEN: ${{ secrets.THIS_GITHUB_TOKEN }}
+      REPOSITORY_NAME: ${{ github.event.repository.name }}
+      REPOSITORY_OWNER: ${{ github.repository_owner }}
+      PROMPT_LEVEL: ${{ secrets.PROMPT_LEVEL }}
