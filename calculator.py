@@ -1,7 +1,7 @@
 class Calculator:
-    # def add(self, a, b):
-    #     """Return the sum of a and b."""
-    #     return a + b
+    def add(self, a, b):
+        """Return the sum of a and b."""
+        return a + b
 
     # def subtract(self, a, b):
     #     """Return the difference of a and b."""
