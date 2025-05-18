@@ -7,7 +7,7 @@ on:
 
 jobs:
   example:
-    uses: exampler0906/ai_reviewer/.github/workflows/code_review.yml@main  # 引用复用的工作流
+    uses: ysxu666/llm_mr_reviewer/.github/workflows/code_review.yml@main   # 引用复用的工作流
     with:
       PULL_REQUEST_ID: ${{ github.event.pull_request.number }}
       COMMIT_ID: ${{ github.event.pull_request.head.sha }}
