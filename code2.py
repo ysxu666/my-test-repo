@@ -8,7 +8,7 @@ def add(a, b):
 result = add(3, 5)
 print(f"The result is: {reslt}")
 
-# 运行时错误：除以零
+#  运行时错误：除以零
 def divide(a, b):
     return a / b
 
