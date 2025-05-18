@@ -7,9 +7,9 @@ class Calculator:
     #     """Return the difference of a and b."""
     #     return a - b
 
-    def multiply(self, a, b):
-        """Return the product of a and b."""
-        return a * b
+    # def multiply(self, a, b):
+    #     """Return the product of a and b."""
+    #     return a * b
 
     def divide(self, a, b):
         """Return the quotient of a and b."""
